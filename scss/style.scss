@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+/*
+theme Name: Revolte
+Author: Shunta Watabe
+Description: 自作テーマ
+version： 1.0.0
+*/
+
+$font-size-xxs: .5rem;
+$font-size-xs: .75rem;
+$font-size-sm: .875rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-xxl: 1.875rem;
+$font-size-main: 2rem;
+
+@import "media-queries";
+// メディアクエリ
+$breakpoint-sm: 768px;
+
+
+@mixin sp-only {
+    @media (max-width: ($breakpoint-sm)) {
+    @content;
+    }
+}
+
+.headline-border{
+    border: 2px solid red;
+    width: 20%;
+}
+
+.bg{
+    height: 500px;
+    background-size: cover;
+    @include respond-above(sm) {
+        font-size: 250px;
+        }
+}
+
+.bg-cover{
+    width: 100%;
+    height: 100vw;
+    @include respond-above(md) {
+        height: 50vw;
+    }
+}
+
+
+.mv-text{
+    position: absolute;
+    width: 100%;
+    top: calc(50% - 25px);
+    text-align: center;
+    left: 0;
+    font-weight: bold; 
+    @include respond-above(md) {
+    position: absolute;
+    width: 60%;
+    top: calc(50% - 25px); 
+    left: 45%;
+    text-align: center;
+    font-weight: bold; 
+    font-size: 40px;
+    }
+}
+
+.header-logo {
+    margin-left: 20px;
+    float: left;
+}
+.text-black {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 17px;
+}
+
+.header-list {
+    margin-left: 60px;
+}
+
+
+// text
+
+.text-xxs{
+    font-size: $font-size-xxs;
+}
+
+.text-xs{
+    font-size: $font-size-xs;
+}
+
+.text-sm {
+    font-size: $font-size-sm;
+}
+
+.text-md {
+    font-size: $font-size-md;
+}
+
+.text-lg {
+    font-size: $font-size-lg;
+}
+
+.text-xl {
+    font-size: $font-size-xl;
+}
+
+.text-xxl {
+    font-size: $font-size-xxl;
+}
+
+a.d-inline-block {
+    text-decoration: none;
+}
+
+.lead {
+    font-size: 35px;
+}
+
+.btn-flat-border {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    text-decoration: none;
+    color: #030303;
+    border: solid 1px white;
+    transition: .8s;
+    border-style: dotted;
+    background-image: linear-gradient(45deg, #eeeded 0%, #ffffff 100%);
+}
+
+.btn-flat-border:hover {
+    background: white(252, 251, 251);
+    color: rgb(252, 252, 252);
+    background-image: linear-gradient(45deg, #eeeded 0%, #ffffff 100%);
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+
+.display-1 {
+    color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+}
+.display-1:before, .display-1:after {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    display: block;
+}
+.display-1:before {
+    margin-right: .4em;
+    background: linear-gradient(-90deg, #888, transparent);
+}
+.display-1:after {
+    margin-left: .4em;
+    background: linear-gradient(90deg, #888, transparent);
+}
+
+.message {
+    font-family: 'Noto Serif JP', serif;
+    text-shadow: 1px 3px 5px #808080;
+}
+
+.title {
+    text-shadow: 1px 4px 6px #808080;
+}
+
+.back {
+    background-color: #eeeded;
+}
+
+.v-message {
+    overflow: hidden;
+}
+
+.mv{
+    margin-top: 5rem;
+}
+
+ul{
+list-style:none;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.fieldset-card {
+    border: .25rem solid;
+    border-radius: .75rem;
+    padding: 1.75rem;
+    height: 100%;
+}
+
+.line-lg {
+    line-height: 2em;
+}
